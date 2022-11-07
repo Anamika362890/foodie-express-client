@@ -10,7 +10,7 @@ const Banner = () => {
 
         <div className='bnr py-10'>
             <div id="slide3" className="carousel-item relative w-full">
-                <div className='bnr-item'>
+                <div className="your-background">
                     <img src={img1} alt='' />
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-9 right-5 top-52 ">
