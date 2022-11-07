@@ -1,0 +1,17 @@
+.bnr img {
+    border-radius: 20px;
+    height: 80vh;
+    width: 1900px;
+}
+
+.bnr-item:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: inline-block;
+    background: linear-gradient(to right, red 0%, rgba(21, 21, 21, 0) 100%);
+
+
+}
