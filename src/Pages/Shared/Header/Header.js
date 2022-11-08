@@ -19,7 +19,7 @@ const Header = () => {
                     <li className='font-semibold'><Link to='/orders'>Add Services</Link></li>
                     <li className='font-semibold'><Link to='/orders'>Review</Link></li>
 
-                    <button onClick={handleLogout} className='btn btn-ghost'>Logout</button>
+                    <button onClick={handleLogout} className='btn btn-outline btn-warning'>Logout</button>
                 </>
                 :
                 <>
