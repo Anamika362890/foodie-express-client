@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FaArrowAltCircleRight, FaArrowRight } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import FoodCard from './FoodCard';
 import './Foods.css';
@@ -25,7 +26,11 @@ const Foods = () => {
 
             </div>
             <div className='text-center my-11'>
-                <Link ><button className='btn'>Click Here To See All Services</button></Link>
+                <Link to='/services' ><button className='btn'>
+                    <p className='mx-1'> Click Here To See All Services</p>
+                    <FaArrowRight></FaArrowRight>
+
+                </button></Link>
             </div>
         </div>
     );
