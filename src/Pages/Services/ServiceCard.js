@@ -1,8 +1,9 @@
 import React from 'react';
+import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import './Services.css'
 
 const ServiceCard = ({ food }) => {
-    const { name, img } = food;
+    const { name, img, details } = food;
     return (
         <div>
 
@@ -12,7 +13,15 @@ const ServiceCard = ({ food }) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div className='flex'>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+                        <FaStar></FaStar>
+
+                        <FaStarHalfAlt></FaStarHalfAlt>
+                    </div>
+                    <p>{details}</p>
                     <div className="card-actions">
                         <button className="btn btn-primary">Buy Now</button>
                     </div>
