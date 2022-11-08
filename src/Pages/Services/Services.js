@@ -12,9 +12,9 @@ const Services = () => {
             .then(data => setFoods(data))
     }, [])
     return (
-        <div className=' text-5xl px text-center py-5'>
-            <h1>Here is Our Full Menu</h1>
-            <div className='serviceCard mx-52'>
+        <div className='   text-center py-5'>
+            <h1 className='text-5xl font-semibold text-gray-500'>Here is Our Full Menu</h1>
+            <div className='serviceCard mx-52 my-14'>
                 {
                     foods.map(food => <ServiceCard
                         key={food._id}

@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider';
 
 const Signup = () => {
-    const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const [error, setError] = useState('');
+    const { createUser, updateUserProfile } = useContext(AuthContext);
 
 
 
@@ -12,15 +14,43 @@ const Signup = () => {
     const handleSignUp = event => {
         event.preventDefault();
         const form = event.target;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-
+        console.log(name, photoURL, email, password);
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                handleUpdateUserProfile(name, photoURL);
                 console.log(user);
+
+                setError('');
+                form.reset();
+
+
+
+
+
             })
-            .catch(err => console.error(err));
+            .catch(error => {
+                console.error(error)
+                setError(error.message);
+            }
+
+            )
+
+
+    }
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+
+        }
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error));
     }
     return (
         <div>
@@ -41,6 +71,12 @@ const Signup = () => {
                                         <span className="label-text">Name</span>
                                     </label>
                                     <input type="text" name='name' placeholder="Your Name" className="input input-bordered" />
+                                </div>
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="label-text">Photo URL</span>
+                                    </label>
+                                    <input type="photoURL" name='photoURL' placeholder="PhotoURL" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
                                     <label className="label">

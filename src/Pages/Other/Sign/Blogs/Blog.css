@@ -1,6 +1,8 @@
 .blog-main {
-    color: darkcyan;
+    color: grey;
     margin: 80px;
+    text-align: center;
+    font-weight: 600;
 }
 
 .blog {
@@ -11,13 +13,13 @@
 }
 
 .single-blog {
-    border: 2px solid darkcyan;
+    border: 2px solid gray;
     border-radius: 20px;
     padding: 30px;
 }
 
 .single-blog h3 {
-    color: darkcyan;
+    color: gray;
 }
 
 /* Tab View */

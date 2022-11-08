@@ -1,12 +1,12 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import './Services.css'
+import { useLoaderData } from 'react-router-dom';
 
-const ServiceCard = ({ food }) => {
-    const { _id, name, img, details, rating } = food;
+const ServiceById = () => {
+    const { img, name, rating, details } = useLoaderData();
     return (
         <div>
+
             <div className='border rounded-2xl'>
                 <div>
                     <img src={img} alt="" className="rounded-xl" />
@@ -27,17 +27,15 @@ const ServiceCard = ({ food }) => {
                         </div>
 
                     </div>
-                    <p>{details.slice(0, 100)}...</p>
+                    <p>{details}</p>
                 </div>
-                <Link to={`/details/${_id}`} >   <button className='btn'>View Details</button></Link>
+
 
 
             </div>
 
-
-
-        </div >
+        </div>
     );
 };
 
-export default ServiceCard;
+export default ServiceById;
