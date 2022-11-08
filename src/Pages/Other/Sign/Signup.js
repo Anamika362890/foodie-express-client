@@ -35,9 +35,9 @@ const Signup = () => {
                             <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                                 Sign in to your account
                             </h1>
-                            <form onSubmit={handleSignUp} className="card-body">
+                            <form onSubmit={handleSignUp} className="space-y-4 md:space-y-6">
                                 <div className="form-control">
-                                    <label className="label">
+                                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                                         <span className="label-text">Name</span>
                                     </label>
                                     <input type="text" name='name' placeholder="Your Name" className="input input-bordered" />

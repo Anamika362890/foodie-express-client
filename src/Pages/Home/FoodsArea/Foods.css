@@ -1,0 +1,59 @@
+.foods-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+}
+
+.p img {
+    height: 30vh;
+    width: 350px;
+}
+
+.card {
+    height: 60vh;
+    width: 330px;
+    border-radius: 60px;
+
+}
+
+
+
+/* Tab View */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+
+    .foods-area {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .p img {
+        height: 20vh;
+        width: 550px;
+    }
+
+    .card {
+        height: 30vh;
+        width: 330px;
+        border-radius: 60px;
+    }
+
+
+
+}
+
+/* Mobile View  */
+@media screen and (max-width: 576px) {
+
+    .foods-area {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .card {
+
+        margin-left: 25px;
+    }
+}
