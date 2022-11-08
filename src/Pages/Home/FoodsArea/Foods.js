@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import FoodCard from './FoodCard';
 import './Foods.css';
 
@@ -22,6 +23,9 @@ const Foods = () => {
                     ></FoodCard>)
                 }
 
+            </div>
+            <div className='text-center my-11'>
+                <Link ><button className='btn'>Click Here To See All Services</button></Link>
             </div>
         </div>
     );

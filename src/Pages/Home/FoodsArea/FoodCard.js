@@ -17,6 +17,8 @@ const FoodCard = ({ food }) => {
                     <div className="card-actions">
                         <button className="btn btn-primary">Buy Now</button>
                     </div>
+
+
                 </div>
             </div>
 
