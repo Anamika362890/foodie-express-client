@@ -1,0 +1,44 @@
+.blog-main {
+    color: darkcyan;
+    margin: 80px;
+}
+
+.blog {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.single-blog {
+    border: 2px solid darkcyan;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.single-blog h3 {
+    color: darkcyan;
+}
+
+/* Tab View */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .blog {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Mobile View  */
+@media screen and (max-width: 576px) {
+    .blog-main {
+        margin: 40px;
+    }
+
+    .blog {
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+}
