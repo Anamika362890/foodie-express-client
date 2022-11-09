@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { FaBars, FaBook, FaCross } from 'react-icons/fa';
+import { FaBars, FaBook, FaCross, FaUser, FaUserAlt } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 import { AuthContext } from './../../Context/AuthProvider';
@@ -14,12 +14,32 @@ const Header = () => {
     const menuItems = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         {
-            user?.email ?
+            user?.uid ?
                 <>
+
                     <li className='font-semibold'><Link to='/orders'>Add Services</Link></li>
+
                     <li className='font-semibold'><Link to='/orders'>Review</Link></li>
 
-                    <button onClick={handleLogout} className='btn btn-outline btn-warning'>Logout</button>
+
+
+                    <button onClick={handleLogout} className='btn btn-outline btn-warning ml-24 mt-3 '>Logout</button>
+                    <NavLink className='text-decoration-none  text-white m-3' data-toggle="tooltip" title={user?.displayName}>
+                        {
+                            user?.photoURL ?
+                                <img className='w-12 rounded-full border' src={user?.photoURL} alt='' />
+                                :
+                                <img className='w-12 rounded-full border' src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/User-avatar.svg/1024px-User-avatar.svg.png' alt='' />
+                        }
+                    </NavLink>
+
+
+
+
+
+
+
+
                 </>
                 :
                 <>
@@ -29,10 +49,16 @@ const Header = () => {
                         <Link to='/signup'><button className="btn btn-outline btn-warning mr-6">Sign Up</button></Link>
                         <Link to='/login'><button className="btn btn-outline btn-warning">Sign In</button></Link>
                     </div>
+
+
+
+
                 </>
 
 
         }
+
+
     </>
     return (
         <div>

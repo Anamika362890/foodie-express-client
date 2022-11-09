@@ -26,7 +26,7 @@ const ReviewPart = () => {
                                     <span className="label-text">Your Review</span>
 
                                 </label>
-                                <textarea className="textarea textarea-bordered h-24" placeholder="Bio"></textarea>
+                                <textarea className="textarea textarea-bordered h-24" placeholder="Write Here"></textarea>
 
                             </div>
                             <button className='btn my-4'>Add A Comment</button>
