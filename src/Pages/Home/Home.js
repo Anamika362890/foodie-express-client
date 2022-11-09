@@ -1,4 +1,5 @@
 import React from 'react';
+import useTitle from '../../Hooks/hooks';
 import About from './About/About';
 import Banner from './Banner/Banner';
 import Foods from './FoodsArea/Foods';
@@ -7,6 +8,7 @@ import ServiceProcess from './ServiceProcess/ServiceProcess';
 
 
 const Home = () => {
+    useTitle('Home')
     return (
         <div className=' lg:mx-52 '>
 

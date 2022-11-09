@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { FaFonticonsFi } from 'react-icons/fa';
+import useTitle from '../../Hooks/hooks';
 import FoodCard from '../Home/FoodsArea/FoodCard';
 import ServiceCard from './ServiceCard';
 
 
 const Services = () => {
+    useTitle('Services')
     const [foods, setFoods] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/service')

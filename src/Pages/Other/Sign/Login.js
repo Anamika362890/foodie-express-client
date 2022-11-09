@@ -1,8 +1,10 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, } from 'react-icons/fa';
+import useTitle from '../../../Hooks/hooks';
 import { AuthContext } from './../../Context/AuthProvider';
 
 const Login = () => {
+    useTitle('Log in')
     const { logIn } = useContext(AuthContext);
     const [error, setError] = useState('');
 
