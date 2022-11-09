@@ -1,9 +1,14 @@
 import React from 'react';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { useLoaderData } from 'react-router-dom';
+import Review from './Review';
 
 const ServiceById = () => {
-    const { img, name, rating, details } = useLoaderData();
+    const { img, name, rating, details, } = useLoaderData();
+
+
+
+
     return (
         <div>
 
@@ -15,6 +20,7 @@ const ServiceById = () => {
                     <p className='text-2xl font-medium'>{name}</p>
                     <div className='flex'>
                         <div>
+
                             <p>{rating}</p>
                         </div>
                         <div className='flex  text-yellow-400'>
