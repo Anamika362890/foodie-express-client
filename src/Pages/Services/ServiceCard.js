@@ -2,6 +2,8 @@ import React from 'react';
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Services.css'
+import 'react-photo-view/dist/react-photo-view.css';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 
 const ServiceCard = ({ food }) => {
     const { _id, name, img, details, rating } = food;
@@ -9,7 +11,13 @@ const ServiceCard = ({ food }) => {
         <div>
             <div className='border rounded-2xl'>
                 <div>
-                    <img src={img} alt="" className="rounded-xl" />
+                    <PhotoProvider>
+                        <PhotoView src={img}>
+                            <img src={img} alt="" className="rounded-xl" />
+                        </PhotoView>
+                    </PhotoProvider>
+
+
                 </div>
                 <div className='items-center text-center'>
                     <p className='text-2xl font-medium'>{name}</p>
