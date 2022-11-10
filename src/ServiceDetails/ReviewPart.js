@@ -34,6 +34,9 @@ const ReviewPart = () => {
             comment
 
         }
+
+
+
         fetch('http://localhost:5000/foodDetails', {
             method: 'POST',
             headers: {
@@ -47,7 +50,7 @@ const ReviewPart = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Order Placed Successfully')
+                    alert('Added Successfully')
                     form.reset();
                 }
             }
@@ -59,13 +62,15 @@ const ReviewPart = () => {
 
     }
 
+
+
     return (
         <div>
 
             <h1 className='text-3xl font-extrabold my-7 pb-3'>Review About This Service</h1>
 
             {
-                reviews.map(review => <Review
+                reviews?.map(review => <Review
                     key={review.review_id}
                     review={review}
                 ></Review>)

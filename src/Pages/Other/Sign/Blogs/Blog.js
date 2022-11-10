@@ -1,7 +1,9 @@
 import React from 'react';
+import useTitle from '../../../../Hooks/hooks';
 import './Blog.css'
 
 const Blog = () => {
+    useTitle('blog')
     return (
         <div>
             <div>

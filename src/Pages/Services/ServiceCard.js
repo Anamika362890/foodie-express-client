@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 import './Services.css'
 import 'react-photo-view/dist/react-photo-view.css';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
+import useTitle from '../../Hooks/hooks';
 
 const ServiceCard = ({ food }) => {
+
     const { _id, name, img, details, rating } = food;
     return (
         <div>

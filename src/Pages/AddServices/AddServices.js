@@ -1,6 +1,8 @@
 import React from 'react';
+import useTitle from '../../Hooks/hooks';
 
 const AddServices = () => {
+    useTitle('Add Services')
     const handleAddComment = event => {
         event.preventDefault();
         const form = event.target;
