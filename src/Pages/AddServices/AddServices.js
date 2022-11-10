@@ -1,5 +1,7 @@
 import React from 'react';
 import useTitle from '../../Hooks/hooks';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const AddServices = () => {
     useTitle('Add Services')
@@ -32,7 +34,7 @@ const AddServices = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    alert('Order Placed Successfully')
+                    toast('Added Successfully')
                     form.reset();
                 }
             }
@@ -105,6 +107,7 @@ const AddServices = () => {
                                     </div>
 
                                 </form>
+                                <ToastContainer />
                             </div>
                         </div>
                     </div>
