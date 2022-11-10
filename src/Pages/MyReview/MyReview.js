@@ -7,7 +7,7 @@ import ReviewTable from './ReviewTable';
 
 const MyReview = () => {
     useTitle('My Reviews')
-    const { user } = useContext(AuthContext);
+    const { user, logout } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
     const navigate = useNavigate();
     const location = useLocation();
@@ -17,21 +17,28 @@ const MyReview = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/foodDetails?email=${user?.email}`)
+        fetch(`http://localhost:5000/foodDetails?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+            }
+        })
 
-            .then(res => res.json())
-            .then(data => setReviews(data))
-
-    }, [user?.email])
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logout();
+                }
+                return res.json();
+            })
+            .then(data => {
+                setReviews(data);
+            })
+    }, [user?.email, logout])
 
 
     return (
 
 
         <div>
-
-
-
 
 
             {
