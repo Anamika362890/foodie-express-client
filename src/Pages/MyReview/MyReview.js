@@ -44,13 +44,13 @@ const MyReview = () => {
             {
                 reviews.length === 0 ?
                     <>
-                        <h1 className='text-5xl my-36 mx-96 px-28 '>No reviews were added</h1>
+                        <h1 className='text-5xl my-36 mx-96 px-28  '>No reviews were added</h1>
                     </>
                     :
                     <>
-                        <h2>You have {reviews.length}</h2>
-                        <div className="overflow-x-auto px ">
-                            <table className="table w-full">
+                        <h2 className='text-gray-500 text-3xl text-center'>You have {reviews.length} Review</h2>
+                        <div className="pt-10 overflow-x-auto px mx-10">
+                            <table className="table w-48 lg:w-full ">
 
                                 <thead>
                                     <tr>

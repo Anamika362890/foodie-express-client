@@ -9,8 +9,7 @@ const ReviewPart = () => {
     const { user } = useContext(AuthContext);
 
 
-    const { _id, name,
-        price, reviews, rating, details } = useLoaderData();
+    const { _id, name, price, reviews, rating, details } = useLoaderData();
 
 
 

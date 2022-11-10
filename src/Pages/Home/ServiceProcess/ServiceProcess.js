@@ -13,7 +13,7 @@ const ServiceProcess = () => {
                     <img src={picture2} alt='' />
                 </div>
                 <div className='mt-7' >
-                    <h1 className='text-4xl'>Why Choose Us!!</h1>
+                    <h1 className='text-4xl text-yellow-500'>Why Choose Us!!</h1>
                     <div className='lg:grid grid-cols-2 gap-5 my-7 '>
                         <div className='border p-2 rounded-lg '>
                             <p className='text-2xl font-bold '>Best Quality </p>

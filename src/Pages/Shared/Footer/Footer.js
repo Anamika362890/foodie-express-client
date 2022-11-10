@@ -4,7 +4,7 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <div className='footer footer-center p-10   bg-neutral text-neutral-content'>
+        <div className='footer footer-center p-10 mt-44  bg-neutral text-neutral-content'>
             <div>
                 <svg width="50" height="50" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" className="inline-block fill-current"><path d="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE-BOtb65I48zBFG6lhpVtz-tNfnSh__c9txbTHwEFiIV8KLYVHYeL-BB1PBxnDk0zGZU&usqp=CAU"></path></svg>
                 <p className="font-bold text-2xl">

@@ -14,9 +14,9 @@ const Foods = () => {
     return (
         <div>
 
-            <h1 className='text-5xl px text-center py-5'>Here is Our 3 Demanding Foods</h1>
+            <h1 className='text-5xl text-center py-7 text-gray-400'>Here is Our 3 Demanding Foods</h1>
 
-            <div className='foods-area py-10  md:px-16 sm:ps-6'>
+            <div className='foods-area lg:py-10  md:px-16 sm:ps-6'>
                 {
                     foods.map(food => <FoodCard
                         key={food._id}

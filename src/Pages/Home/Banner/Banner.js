@@ -16,14 +16,11 @@ const Banner = () => {
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-9 right-5  top-60">
 
-                    <h1 className='text-lime-400 top font-bold text-6xl '>We are always ready <br></br> to supply food for<br /> you anytime
+                    <h1 className='text-yellow-500 top font-bold text-6xl '>We are always ready <br></br> to supply food for<br /> you anytime
 
                     </h1>
                 </div>
-                <div className=" absolute flex justify-between transform -translate-y-1/2 left-9 right-5 top-96 ">
-                    <button className='btn'>Log in now</button>
 
-                </div>
             </div>
         </div >
     );
