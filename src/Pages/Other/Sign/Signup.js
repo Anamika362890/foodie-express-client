@@ -60,8 +60,8 @@ const Signup = () => {
             <section className="bg-gray-50 dark:bg-gray-900">
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                     <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-                        <img className="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" />
-                        Flowbite
+                        <img className="w-12 h-10 rounded-xl mr-2" src="https://cdn.dribbble.com/users/77598/screenshots/15211765/media/fcc955283307a8ead2d4e4a8daf0d852.png?compress=1&resize=400x300&vertical=top" alt="logo" />
+                        <h1 className='font-bold text-2xl text-gray'><span className='text-yellow-400 '>Foodies</span> Express</h1>
                     </a>
                     <div className="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
                         <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
@@ -70,13 +70,13 @@ const Signup = () => {
                             </h1>
                             <form onSubmit={handleSignUp} className="space-y-4 md:space-y-6">
                                 <div className="form-control">
-                                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                                    <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white font-bold">
                                         <span className="label-text">Name</span>
                                     </label>
                                     <input type="text" name='name' placeholder="Your Name" className="input input-bordered" />
                                 </div>
                                 <div className="form-control">
-                                    <label className="label">
+                                    <label className="label font-bold">
                                         <span className="label-text">Photo URL</span>
                                     </label>
                                     <input type="photoURL" name='photoURL' placeholder="PhotoURL" className="input input-bordered" />

@@ -9,10 +9,11 @@ const AddServices = () => {
         const rating = form.rating.value;
         const details = form.details.value;
         const price = form.price.value;
+        const date = new Date("<YYYY-mm-ddTHH:MM:ss>");
 
         const foods = {
 
-            name, img, details, rating, price
+            name, img, details, rating, price, date
 
 
         }

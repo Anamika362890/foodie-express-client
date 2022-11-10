@@ -1,14 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaUser } from 'react-icons/fa';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Pages/Context/AuthProvider';
 import Review from './Review';
+import { Navigate } from 'react-router-dom';
 
 const ReviewPart = () => {
     const { user } = useContext(AuthContext);
 
+
     const { _id, name,
         price, reviews, rating, details } = useLoaderData();
+
+
+
 
     const handleAddComment = event => {
         event.preventDefault();
@@ -89,7 +94,10 @@ const ReviewPart = () => {
                     <>
 
                         <div>
-                            <h1 className='text-2xl font-semibold'> Please <Link to={details._id}><button className='btn'>Login</button></Link> First to add your comment</h1>
+                            <h1 className='text-2xl font-semibold'> Please <Link to='/login'><button className='btn'>Login</button></Link> First to add your comment</h1>
+
+
+
 
                         </div>
                     </>

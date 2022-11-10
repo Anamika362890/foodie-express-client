@@ -6,10 +6,14 @@ import ServiceById from './ServiceById';
 const ServiceDetails = () => {
 
     return (
-        <div className='grid grid-cols-2 gap-4 mx-24 text-center'>
+        <div>
 
-            <ServiceById></ServiceById>
-            <ReviewPart></ReviewPart>
+            <div className='grid grid-cols-2 gap-4 mx-24 text-center'>
+
+                <ServiceById></ServiceById>
+                <ReviewPart></ReviewPart>
+            </div>
+
         </div>
     );
 };
