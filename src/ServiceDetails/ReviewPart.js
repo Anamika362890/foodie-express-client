@@ -89,7 +89,8 @@ const ReviewPart = () => {
                     <>
 
                         <div>
-                            <h1 className='text-2xl font-semibold'> Please <Link to='/login'><button className='btn'>Login</button></Link> First to add your comment</h1>
+                            <h1 className='text-2xl font-semibold'> Please <Link to={details._id}><button className='btn'>Login</button></Link> First to add your comment</h1>
+
                         </div>
                     </>
             }

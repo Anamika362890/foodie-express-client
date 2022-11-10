@@ -1,11 +1,17 @@
 import React, { useContext, useState } from 'react';
 import { FaGoogle, } from 'react-icons/fa';
+import { useLocation, useNavigate } from 'react-router-dom';
 import useTitle from '../../../Hooks/hooks';
 import { AuthContext } from './../../Context/AuthProvider';
 
 const Login = () => {
     useTitle('Log in')
     const { logIn } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
+
     const [error, setError] = useState('');
 
     const handleSubmit = event => {
@@ -20,6 +26,8 @@ const Login = () => {
                 console.log(user);
                 form.reset();
                 setError('');
+
+                navigate(from, { replace: true });
 
             })
             .catch(error => {

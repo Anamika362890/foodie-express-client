@@ -29,6 +29,7 @@ const Signup = () => {
 
                 setError('');
                 form.reset();
+                navigate('/')
 
 
 

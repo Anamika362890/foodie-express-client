@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import useTitle from '../../Hooks/hooks';
 import { AuthContext } from '../Context/AuthProvider';
 import ReviewTable from './ReviewTable';
@@ -8,6 +9,10 @@ const MyReview = () => {
     useTitle('My Reviews')
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([])
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
 
     useEffect(() => {
