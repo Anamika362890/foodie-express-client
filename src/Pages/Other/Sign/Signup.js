@@ -57,7 +57,7 @@ const Signup = () => {
     }
     return (
         <div>
-            <section className="bg-gray-50 dark:bg-gray-900">
+            <section className="my-12 bg-gray-50 dark:bg-gray-900">
                 <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
                     <a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
                         <img className="w-12 h-10 rounded-xl mr-2" src="https://cdn.dribbble.com/users/77598/screenshots/15211765/media/fcc955283307a8ead2d4e4a8daf0d852.png?compress=1&resize=400x300&vertical=top" alt="logo" />
@@ -94,9 +94,11 @@ const Signup = () => {
                                     <input type="text" name='password' placeholder="password" className="input input-bordered" required />
 
                                 </div>
+                                <p className='text-red-500'>{error.slice(9, 200)}</p>
                                 <div className="form-control mt-6">
-                                    <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                    <input className="btn " type="submit" value="Sign Up" />
                                 </div>
+                                <h3>Already Register? <Link className='text-yellow-500' to='/login'>Login</Link></h3>
                             </form>
                         </div>
                     </div>

@@ -1,3 +1,4 @@
+import { GoogleAuthProvider } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { FaGoogle, } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -6,13 +7,51 @@ import { AuthContext } from './../../Context/AuthProvider';
 
 const Login = () => {
     useTitle('Log in')
-    const { logIn } = useContext(AuthContext);
+    const { logIn, providerLogin } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
+
+
 
     const from = location.state?.from?.pathname || '/';
 
     const [error, setError] = useState('');
+
+    const googleProvider = new GoogleAuthProvider()
+
+    const handleGoogleLogin = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                //jwt
+                const currentUser = {
+                    email: user.email
+                }
+                console.log(currentUser);
+
+                //get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+
+                        localStorage.setItem('token', data.token);
+                        navigate(from, { replace: true });
+                    })
+
+
+
+            })
+            .catch(error => console.error(error))
+
+    }
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -82,19 +121,20 @@ const Login = () => {
                                     <label for="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
                                     <input type="password" name="password" id="password" placeholder="Your Password" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required="" />
                                 </div>
+                                <p className='text-red-500'>{error.slice(9, 200)}</p>
                                 <button className='btn'>Login</button>
                                 <div className="   text-center">
 
-                                    Sign in with
+                                    Or,Sign in with
 
                                 </div>
-                                <div className='text-center'>
-                                    <FaGoogle></FaGoogle>
+                                <div className='text-5xl mx-40 pl-2 text-red-500'>
+                                    <button onClick={handleGoogleLogin}><FaGoogle></FaGoogle></button>
                                 </div>
 
                                 <button type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Sign in</button>
-                                <p className="text-sm font-light text-gray-500 dark:text-gray-400">
-                                    Don’t have an account yet? <Link to='/signup'><span className='text-yellow-400'>Sign Up</span></Link>
+                                <p className="text-sm font-light ">
+                                    Don’t have an account yet? <Link to='/signup'><span className='text-yellow-500'>Sign Up</span></Link>
                                 </p>
                             </form>
                         </div>
