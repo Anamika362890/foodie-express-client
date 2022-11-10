@@ -17,7 +17,7 @@ const MyReview = () => {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/foodDetails?email=${user?.email}`, {
+        fetch(`https://foodies-express-server.vercel.app/foodDetails?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
             }

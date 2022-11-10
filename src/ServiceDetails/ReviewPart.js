@@ -37,7 +37,7 @@ const ReviewPart = () => {
 
 
 
-        fetch('http://localhost:5000/foodDetails', {
+        fetch('https://foodies-express-server.vercel.app/foodDetails', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

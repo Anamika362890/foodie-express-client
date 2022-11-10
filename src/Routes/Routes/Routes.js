@@ -53,19 +53,19 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <ServiceDetails></ServiceDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/service/${params.id}`)
+                loader: ({ params }) => fetch(`https://foodies-express-server.vercel.app/service/${params.id}`)
 
             },
             {
                 path: '/details/:id',
                 element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://foodies-express-server.vercel.app/details/${params.id}`)
             },
 
             {
                 path: '/details/:id',
                 element: <PrivateRoute><MyReview></MyReview></PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+                loader: ({ params }) => fetch(`https://foodies-express-server.vercel.app/details/${params.id}`)
             }
 
         ]

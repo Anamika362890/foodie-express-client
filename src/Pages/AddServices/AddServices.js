@@ -19,7 +19,7 @@ const AddServices = () => {
 
 
         }
-        fetch('http://localhost:5000/service', {
+        fetch('https://foodies-express-server.vercel.app/service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

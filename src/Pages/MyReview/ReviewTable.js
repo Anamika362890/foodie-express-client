@@ -10,7 +10,7 @@ const ReviewTable = ({ review }) => {
     const handleCommentSubmit = event => {
         event.preventDefault();
         // console.log(user);
-        fetch(`http://localhost:5000/foodDetails${_id}`, {
+        fetch(`https://foodies-express-server.vercel.app/foodDetails${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
