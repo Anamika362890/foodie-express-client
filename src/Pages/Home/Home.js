@@ -4,6 +4,7 @@ import About from './About/About';
 import Banner from './Banner/Banner';
 import Foods from './FoodsArea/Foods';
 import ServiceProcess from './ServiceProcess/ServiceProcess';
+import Subscribe from './Subscribe/Subscribe';
 
 
 
@@ -17,6 +18,7 @@ const Home = () => {
             <ServiceProcess></ServiceProcess>
 
             <About></About>
+            <Subscribe></Subscribe>
 
 
 
