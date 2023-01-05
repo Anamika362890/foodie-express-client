@@ -43,6 +43,7 @@ const Header = () => {
                 </>
                 :
                 <>
+                    <li className='font-semibold'><Link to='/services'>About Us</Link></li>
                     <li className='font-semibold'><Link to='/services'>Services</Link></li>
                     <li className='font-semibold'><Link to='/blogs'>Blogs</Link></li>
                     <div className=" lg:mx-48 ">
