@@ -7,7 +7,7 @@ const TopCustomerSay = () => {
                 <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <div class="max-w-2xl mx-auto text-center">
                         <h2 class=" text-4xl text-yellow-500 sm:text-4xl lg:text-5xl">What our customers say</h2>
-                        <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                        <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600">They are our top customer.</p>
                     </div>
 
                     <div class="grid grid-cols-1 gap-6 px-4 mt-12 sm:px-0 xl:mt-20 xl:grid-cols-4 sm:grid-cols-2">

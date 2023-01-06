@@ -43,9 +43,13 @@ const Header = () => {
                 </>
                 :
                 <>
-                    <li className='font-semibold'><Link to='/services'>About Us</Link></li>
+
                     <li className='font-semibold'><Link to='/services'>Services</Link></li>
+
+                    <li className='font-semibold'><Link to='/aboutUs'>About</Link></li>
+                    <li className='font-semibold'><Link to='/contact'>Contact Us</Link></li>
                     <li className='font-semibold'><Link to='/blogs'>Blogs</Link></li>
+
                     <div className=" lg:mx-48 ">
                         <Link to='/signup'><button className="btn btn-outline btn-warning mr-6">Sign Up</button></Link>
                         <Link to='/login'><button className="btn btn-outline btn-warning">Sign In</button></Link>
